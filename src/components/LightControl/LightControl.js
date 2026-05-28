@@ -7,7 +7,11 @@ export default function LightControl({isLightOn, onToggle}){
     return(
         <View style={LightControlStyles.card}>
             <TouchableOpacity onPress={onToggle}>
-                <Icon/>
+                <Icon
+                    name={isLightOn ? 'lightbulb-on' : 'lightbulb-outline'}
+                    size={100}
+                    color={isLightOn ? '#F1C40F' : '#555'}
+                />
             </TouchableOpacity>
             <Text style={LightControlStyles.label}>{isLightOn? 'Luz Ligada' : 'Luz Apagada'}</Text>
         </View>

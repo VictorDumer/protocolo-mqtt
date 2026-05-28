@@ -4,6 +4,7 @@ import { View, Text } from 'react-native';
 import LightControl from './src/components/LightControl/LightControl';
 import Gauges from './src/components/Gauge/Gauges';
 import StatusModal from './src/components/StatusModal/StatusModal';
+import AppStyle from './src/styles/appStyle';
 
 const mqtt = new MQTTService();
 export default function App() {
@@ -21,7 +22,6 @@ export default function App() {
     pass: process.env.EXPO_PUBLIC_MQTT_PASS,
     clientId: 'RN_APP_' + Math.random(),
   }
-  console.log(mqttConfig)
 
   useEffect(()=>{
     startConnection();
@@ -53,9 +53,9 @@ export default function App() {
   }
 
   return (
-    <View>
-        <Text> Smart Home IOT</Text>
-        <LightControl isLightOn={isLightOn} onToggle={togglelight}/>
+    <View style={AppStyle.container}>
+        <Text style={AppStyle.header}> Smart Home IOT</Text>
+        <LightControl isLightOn={isLightOn} onToggle={togglelight} />
         <Gauges temp={temp} umid={umid}/>
 
         <StatusModal 

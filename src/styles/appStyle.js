@@ -2,7 +2,7 @@ import React from "react";
 import { StyleSheet } from "react-native";
 
 const AppStyle = StyleSheet.create({
-    contaner:{
+    container:{
         flex:1,
         backgroundColor: 'rgba(0,0,0,0.85)',
         padding:20,
