@@ -14,6 +14,19 @@ const AppStyle = StyleSheet.create({
         fontWeight:'bold',
         marginTop:40,
         marginBottom:20,
+    },
+    btnHistory: {
+        backgroundColor: '#444',
+        padding: 15,
+        borderRadius: 12,
+        width: '100%',
+        marginTop:'80%'
+    },
+    btnText: {
+        collor: '#fff',
+        textAlign: 'center',
+        fontSize: 16,
+        fontWeight: 'bold',
     }
 })
 

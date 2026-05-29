@@ -1,7 +1,6 @@
-import React from "react";
 import { StyleSheet } from "react-native";
 
-const ModalStyles = StyleSheet.create({
+export const HistoryStyle= StyleSheet.create({
     modalContainer: {
         flex: 1,
         backgroundColor: 'rgba(0, 0, 0, 0.85)',
@@ -23,12 +22,11 @@ const ModalStyles = StyleSheet.create({
         textAlign: 'center',
         fontSize: 16,
     },
-    btnRetry: {
-        backgroundColor: '#27AE60',
-        padding: 15,
-        borderRadius: 12,
-        width: '100%',
-        marginBottom: 12,
+    btnText: {
+        collor: '#fff',
+        textAlign: 'center',
+        fontSize: 16,
+        fontWeight: 'bold',
     },
     btnLater: {
         backgroundColor: '#444',
@@ -36,12 +34,4 @@ const ModalStyles = StyleSheet.create({
         borderRadius: 12,
         width: '100%',
     },
-    btnText: {
-        collor: '#fff',
-        textAlign: 'center',
-        fontSize: 16,
-        fontWeight: 'bold',
-    }
 })
-
-export default ModalStyles;
