@@ -25,8 +25,9 @@ export default function App() {
       value: value
     };
 
+    setData(prevData => [newData, ...prevData]);
+    
     await insertData(newData);
-    load();
   };
 
   async function load(){
@@ -58,18 +59,33 @@ export default function App() {
     mqtt.connect(
       mqttConfig, (topic,message)=>{
         if(topic === 'casa/temp') {
-          setTemp(parseFloat(message))
-          newChange('temperatura',message)
+          const parsedTemp = parseFloat(message)
+          
+          if (!isNaN(parsedTemp) && parsedTemp ) {
+          setTemp(parsedTemp)
+          newChange('temperatura', parsedTemp)
+          }
         }
         if(topic === 'casa/umid') {
-          setUmid(parseFloat(message))
-          newChange('umidade',message)
+          const parsedUmid = parseFloat(message)
 
+          if (!isNaN(parsedUmid) && parsedUmid) {
+            setUmid(parsedUmid);
+            newChange('umidade', parsedUmid);
+          } 
+        
           
         }
         if(topic === 'casa/luz') {
-            setIsLightOn(message==='1')
-            newChange('luz',message)
+          if (message === '1') {
+          setIsLightOn(true)
+          newChange('luz', 'ligada');
+          
+          } else if (message === '0') {
+          setIsLightOn(false)
+          newChange('luz', 'desligada')
+          }
+    
         }
       },
       ()=>{
@@ -87,6 +103,11 @@ export default function App() {
   const togglelight = () => {
     const newState = isLightOn ? "0" : "1"
     mqtt.publish('casa/luz', newState)
+  }
+  
+  const handleOpenHistory = ()=>{
+    setShowDialog(false)
+    load()
   }
 
   return (
@@ -107,7 +128,7 @@ export default function App() {
         
         <History 
         data={data}
-        onClose={()=>setShowDialog(false)}
+        onClose={()=>handleOpenHistory()}
         visible={showDialog}
         />
     </View>

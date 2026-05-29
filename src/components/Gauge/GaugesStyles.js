@@ -3,12 +3,12 @@ import { StyleSheet } from 'react-native';
 const GaugeStyles = StyleSheet.create({
     row: {
         flexDirection: 'row',
-        justifyContent: 'space-between',
+        justifyContent: 'space-around',
         width: '100%',
     },
     gaugeBox: {
         backgroundColor: '#1e1e1e',
-        padding: 15,
+        padding: 30,
         alignItems: 'center',
         with: '48%',
         borderRadius: 20,

@@ -1,5 +1,5 @@
 const warn = "O correu um erro ao chamar a api.";
-const baseUrl= process.env.EXPO_BASE_ADDRESS
+const baseUrl= process.env.EXPO_PUBLIC_ADDRESS
 export const loadData = async () => {
   try {
     const response = await fetch(`${baseUrl}/data`).then((response) =>

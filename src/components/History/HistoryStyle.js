@@ -15,15 +15,15 @@ export const HistoryStyle= StyleSheet.create({
         alignItems: 'center',
         borderWidth: 1,
         borderColor: '#333',
+        maxHeight:'60%',
     },
     modalText: {
-        color: '#fff',
         marginBottom: 25,
         textAlign: 'center',
         fontSize: 16,
     },
     btnText: {
-        collor: '#fff',
+        color: '#fff',
         textAlign: 'center',
         fontSize: 16,
         fontWeight: 'bold',

@@ -10,7 +10,7 @@ export default function Gauges({temp,umid}){
                 <CircularProgress
                 value={temp}
                 radius={60}
-                title={'C'}
+                title={'ºC'}
                 titleColor={'#fff'}
                 activeStrokeColor={"#E74C3C"}
                 inActiveStrokeColor={'#2C3E50'}
