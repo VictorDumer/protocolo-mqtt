@@ -88,7 +88,7 @@ Com o `.env` configurado, o `json-server` ativo e o `ngrok` rodando, siga os pas
 
 1. Clone este repositório para a sua máquina (caso ainda não tenha feito):
 ```bash
-git clone [https://github.com/VictorDumer/protocolo-mqtt.git](https://github.com/VictorDumer/protocolo-mqtt.git)
+git clone https://github.com/VictorDumer/protocolo-mqtt.git
 
 ```
 
