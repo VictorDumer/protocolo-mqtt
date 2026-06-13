@@ -1,6 +1,7 @@
 import React from "react"
 import { FlatList, Modal, View, Text, TouchableOpacity } from "react-native"
 import { HistoryStyle } from "./HistoryStyle"
+import Dashboard from "../Dashboard/Dashboard"
 
 export default function History({visible, onClose, data}){
 
@@ -10,6 +11,7 @@ export default function History({visible, onClose, data}){
                 <View style={HistoryStyle.modalContent}>
                     <FlatList 
                         data={data}
+                        ListHeaderComponent={<Dashboard data={data} />}
                         keyExtractor={(item) => item.id ? item.id.toString() : Math.random().toString()}
                         renderItem={({item}) => (
                              <View style={HistoryStyle.modalText}>

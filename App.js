@@ -123,7 +123,7 @@ export default function App() {
         />
 
         <TouchableOpacity onPress={()=>setShowDialog(true)} style={AppStyle.btnHistory}>
-          <Text style={AppStyle.btnText}> History Button</Text>
+          <Text style={AppStyle.btnText}> Histórico</Text>
         </TouchableOpacity>
         
         <History 
