@@ -17,14 +17,18 @@ O objetivo do sistema é estabelecer uma comunicação direta com um Broker MQTT
 
 ---
 
-## Vídeo Demonstrativo
+## Vídeo Demonstrativo da primeira parte do app
 
 Para ver o aplicativo em funcionamento na prática e entender melhor a sua integração, assista ao vídeo de demonstração:
 
 [![MQTT DEMONSTRATION](https://img.youtube.com/vi/JTI_jsQY55k/hqdefault.jpg)](https://youtu.be/JTI_jsQY55k)
 
 ---
+## Video demonstratio da implementação do dashboard
 
+[![MQTT DASHBOARD DEMONSTRATION](https://i9.ytimg.com/vi/DaUyORBq_Ws/mqdefault.jpg?sqp=CKDzstEG&rs=AOn4CLBsmJa-oc-NFy1wKD2dOlgxaMhdsQ&retry=4)](https://www.youtube.com/watch?v=DaUyORBq_Ws)
+
+--- 
 ## Tecnologias utilizadas
 
 A escolha das ferramentas buscou agilidade no desenvolvimento e portabilidade entre plataformas:
